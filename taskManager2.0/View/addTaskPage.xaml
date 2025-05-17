@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="taskManager2._0.View.addTaskPage"
+             Title="addTaskPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Add Task Below"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="HeadlineEntry" Placeholder="Please enter a head line" />
+        <Entry x:Name="contentEntry" Placeholder="Please enter more info about your task" />
+
+        <Button Text="Submit" Clicked="OnSaveSubmitClicked" Margin="0,20,0,30"/>
+
+
+        <CollectionView x:Name="TaskListView"
+                                HeightRequest="150">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12" Padding="8" Margin="4">
+                        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Spacing="10">
+                            <VerticalStackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding headline}" FontAttributes="Bold" TextColor="#fff" />
+                                <Label Text="{Binding content}" TextColor="#ccc" />
+                            </VerticalStackLayout>
+                            <Button Text="Edit"
+                            Clicked="OnEditClicked"
+                            BackgroundColor="Orange"
+                            TextColor="White"
+                            Padding="4,0"/>
+                            
+                            <Button Text="Delete" 
+                            Clicked="OnDeleteClicked"
+                            BackgroundColor="Red" 
+                            TextColor="White"
+                            HorizontalOptions="End" />
+                        </HorizontalStackLayout>
+                    </Border>
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+    </VerticalStackLayout>
+</ContentPage>

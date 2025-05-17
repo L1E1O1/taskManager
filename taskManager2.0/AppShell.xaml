@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="taskManager2._0.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:taskManager2._0"
+    Title="taskManager2._0">
+
+    <TabBar>
+        <ShellContent Title="Start" Icon="home.png" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="add task" Icon="book.png" ContentTemplate="{DataTemplate local:View.addTaskPage}"/>
+    </TabBar>
+
+</Shell>
