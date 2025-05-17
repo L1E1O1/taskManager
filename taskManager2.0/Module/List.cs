@@ -9,10 +9,10 @@ namespace taskManager2._0.Module
 {
     public class List
     {
-
+        /// en lista som innehåller alla tasks
         public List <MyTask> taskList { get; } = new List <MyTask> ();
 
-
+        /// en konstruktor som tar in en lista av tasks
         public MyTask? CreateTask(string headline, string content)
         {
 
@@ -27,15 +27,6 @@ namespace taskManager2._0.Module
             return new MyTask(headline, content);
          
            
-        }
-        public void removeTask()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void markAsComplete()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

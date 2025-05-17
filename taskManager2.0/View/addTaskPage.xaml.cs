@@ -16,8 +16,8 @@ public partial class addTaskPage : ContentPage
 	}
 
 
-  
 
+    // den här tar in användarens inmatning och skapar en ny task
     public void OnSaveSubmitClicked(object sender, EventArgs e)
 
     {
@@ -27,7 +27,7 @@ public partial class addTaskPage : ContentPage
 		if (!string.IsNullOrEmpty(headline) && !string.IsNullOrEmpty(content)) {
 
             Debug.WriteLine("succesfull" + " " +  headline + " " + content );
-            MyTask? newTask = list.CreateTask(headline, content);
+            MyTask? newTask = list.CreateTask(headline, content);  
 
 			if (newTask is null) {
                 DisplayAlert("Error", "task could not be created", "OK");
@@ -36,25 +36,16 @@ public partial class addTaskPage : ContentPage
 
             LoadTaskListItem();
             clear();
-
-
         }
         else
 		{
 			DisplayAlert("Error", "please fill in the Entrys", "OK");
         }
-
-
         Debug.WriteLine("clicked");
-
-
 		return;
-		
-
-
-
     }
 
+    // den här metoden tar bort den markerade tasken som användaren vill ta bort
     public void OnDeleteClicked(object sender, EventArgs e)
     {
         var button = sender as Button;
@@ -67,7 +58,7 @@ public partial class addTaskPage : ContentPage
         }
     }
 
-
+    // den här metoden tar in användarens inmatning och redigerar tasken
     public async void OnEditClicked(object sender, EventArgs e)
     {
         var button = sender as Button;
@@ -93,7 +84,7 @@ public partial class addTaskPage : ContentPage
     }
 
 
-
+    // den här metoden laddar tasklistan och visar den i listviewen
     public void LoadTaskListItem()
 	{
 
@@ -102,7 +93,7 @@ public partial class addTaskPage : ContentPage
 
     }
 
-
+    // den här metoden tar bort texten i inmatningsfälten
     public void clear()
     {
         HeadlineEntry.Text = string.Empty;

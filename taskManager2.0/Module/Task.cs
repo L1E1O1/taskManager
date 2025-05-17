@@ -12,23 +12,16 @@ namespace taskManager2._0.Module
         public string content {get; set; }
 
 
+        // en konstruktor som tar in en rubrik och en uppgift
         public Task(string headline, string content)
         {
-
             this.headline = headline;
             this.content = content;
-
-
         }
 
         public override string ToString()
         {
             return $"headline: {headline} , your task: {content}";
-        }
-
-        public virtual void addToList()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
