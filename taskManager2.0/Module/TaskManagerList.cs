@@ -7,7 +7,7 @@ using MyTask = taskManager2._0.Module.Task;
 
 namespace taskManager2._0.Module
 {
-    public class List
+    public class TaskManagerList
     {
         /// en lista som innehåller alla tasks
         public List <MyTask> taskList { get; } = new List <MyTask> ();

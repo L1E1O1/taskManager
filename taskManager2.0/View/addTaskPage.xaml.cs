@@ -8,11 +8,11 @@ namespace taskManager2._0.View;
 
 public partial class addTaskPage : ContentPage
 {
-	  public List list ;
+	  public TaskManagerList list ;
 	public addTaskPage()
 	{
 		InitializeComponent();
-		list = new List();
+		list = new TaskManagerList();
 	}
 
 

@@ -7,8 +7,9 @@
     Title="taskManager2._0">
 
     <TabBar>
-        <ShellContent Title="Start" Icon="home.png" ContentTemplate="{DataTemplate local:MainPage}" />
-        <ShellContent Title="add task" Icon="book.png" ContentTemplate="{DataTemplate local:View.addTaskPage}"/>
+        <ShellContent Title="Start"  ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="add task"  ContentTemplate="{DataTemplate local:View.addTaskPage}"/>
+        <ShellContent Title="Sponsor"  ContentTemplate="{DataTemplate local:View.SponsorPage}"/>
     </TabBar>
 
 </Shell>
