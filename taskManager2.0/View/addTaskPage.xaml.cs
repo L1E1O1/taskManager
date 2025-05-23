@@ -13,6 +13,7 @@ public partial class addTaskPage : ContentPage
 	{
 		InitializeComponent();
 		list = new TaskManagerList();
+
 	}
 
 
@@ -27,7 +28,7 @@ public partial class addTaskPage : ContentPage
 		if (!string.IsNullOrEmpty(headline) && !string.IsNullOrEmpty(content)) {
 
             Debug.WriteLine("succesfull" + " " +  headline + " " + content );
-            MyTask? newTask = list.CreateTask(headline, content);  
+            MyTask newTask = list.CreateTask(headline, content);  
 
 			if (newTask is null) {
                 DisplayAlert("Error", "task could not be created", "OK");
@@ -49,7 +50,7 @@ public partial class addTaskPage : ContentPage
     public void OnDeleteClicked(object sender, EventArgs e)
     {
         var button = sender as Button;
-        var task = button?.BindingContext as MyTask; 
+        var task = button.BindingContext as MyTask; 
 
         if (task != null)
         {
@@ -62,7 +63,7 @@ public partial class addTaskPage : ContentPage
     public async void OnEditClicked(object sender, EventArgs e)
     {
         var button = sender as Button;
-        var task = button?.BindingContext as MyTask;
+        var task = button.BindingContext as MyTask;
 
         if (task != null)
         {

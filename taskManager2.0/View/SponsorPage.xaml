@@ -12,7 +12,7 @@
              FontSize="32"
              HorizontalOptions="Center" />
 
-            <Label Text=" This is our Sponsor have a look at these amazing products" />
+            <Label x:Name="sponsorLabel"  Text=" This is our Sponsor have a look at these amazing products" />
            
             <CollectionView x:Name="ProductsView">
                 <CollectionView.ItemTemplate>

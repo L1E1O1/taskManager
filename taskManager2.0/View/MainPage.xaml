@@ -7,16 +7,33 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <CollectionView x:Name="TaskListView"
-                          HeightRequest="150">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Border Stroke="#DDD" StrokeThickness="1" StrokeShape="RoundRectangle 12">
-                            <Label Text="{Binding}" Padding="12,8" TextColor="#fff" />
-                        </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+            <Label Text="Please fill the required information for our sponsor"></Label>
+            <Picker x:Name="AccountTypePicker"
+                        Title="Choose Account Type"
+                        TextColor="#333"
+                        HeightRequest="70"
+                        Margin="0,4,0,0">
+                <Picker.Items>
+                    <x:String>Staff</x:String>
+                    <x:String>Costumer</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry
+                x:Name="userName"
+                Placeholder="Your Name"
+                Keyboard="Text" />
+            <Entry
+                x:Name="userPassword"
+                Placeholder="Enter password"
+                Keyboard="Text" />
+
+            <Button
+                x:Name="LoginButton"
+                Text="Login"
+                BackgroundColor="#007AFF"
+                TextColor="#FFF"
+                HeightRequest="70"
+                Clicked="OnLoginButtonClicked" />
         </VerticalStackLayout>
     </ScrollView>
 
